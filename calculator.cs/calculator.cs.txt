@@ -1,18 +1,48 @@
-class calculator
-{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-static voif main (string[] args)
+namespace ConsoleApplication1
 {
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "aplikasi calculator";
+            Console.Write("masukan nilai pertama : ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("masukan nilai kedua : ");
+            int b = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine();
+
+            Console.WriteLine("hasil penambahan" + a + "+" + b + "=" + penambahan(a, b));
+            Console.WriteLine("hasil pengurangan {0} - {1} = {2} ", a, b, pengurangan(a, b));
+            Console.WriteLine("hasil perkalian {0} * {1} = {2}", a, b, perkalian(a, b));
+            Console.WriteLine("hasil pembagian {0} / {1} = {2}", a, b, pembagian(a, b));
+            Console.WriteLine("\ntekan sembarang key untuk keluar");
+            Console.ReadKey();
+        }
+        static int penambahan(int a, int b)
+        {
+            return a + b;
+        }
+        static int pengurangan(int a, int b)
+        {
+            return a - b;
+        }
+        static int perkalian(int a, int b)
+        {
+            return a * b;
+        }
+        static int pembagian(int a, int b)
+        {
+            return a / b;
+        }
+
+
+    }
 }
 
-static int penambahan (int a, int b)
- {
- return a + b;
- }
- static int pengurangan(int a, int b)
- 
- {
-	return a - b; 
- }
-}
